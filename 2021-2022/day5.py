@@ -1,32 +1,34 @@
+import numpy as np
+
 data = open('day5.data.txt', 'r').read().split('\n')
 
 def calculateValidPos(valueMap):
 
 	total = 0;
 
-	for x in range(0, 1000):
+	for value in valueMap.flatten():
 
-		for y in range(0, 1000):
-
-			if (valueMap[x][y] > 1):
-
-				total += 1
+		total += value > 1
 
 	return total
 
 def initializeMap():
 
-	ventMap = []
+	return np.zeros((1000, 1000))
 
-	for x in range(0, 1000):
+def getSign(value):
 
-		ventMap.append([])
+	if value > 0:
 
-		for y in range(0, 1000):
+		return 1
 
-			ventMap[x].append(0)
+	elif value < 0:
 
-	return ventMap
+		return -1
+
+	else:
+
+		return 0
 
 def part1():
 
@@ -39,37 +41,21 @@ def part1():
 		x1, y1 = map(int, part1.split(','))
 		x2, y2 = map(int, part2.split(','))
 
-		if x1 == x2:
+		xDir = getSign(x2 - x1)
+		yDir = getSign(y2 - y1)
 
-			if y1 < y2:
+		# Diagonal not valid
+		if xDir != 0 and yDir != 0:
+			continue
 
-				while y1 <= y2:
+		while x1 != x2 or y1 != y2:
 
-					dataMap[x1][y1] += 1
-					y1 += 1
+			dataMap[x1][y1] += 1
 
-			else:
+			x1 += xDir
+			y1 += yDir
 
-				while y2 <= y1:
-
-					dataMap[x1][y2] += 1
-					y2 += 1
-
-		elif y1 == y2:
-
-			if x1 < x2:
-
-				while x1 <= x2:
-
-					dataMap[x1][y1] += 1
-					x1 += 1
-
-			else:
-
-				while x2 <= x1:
-
-					dataMap[x2][y1] += 1
-					x2 += 1
+		dataMap[x1][y1] += 1
 
 	print(calculateValidPos(dataMap))
 
@@ -86,71 +72,17 @@ def part2():
 		x1, y1 = map(int, part1.split(','))
 		x2, y2 = map(int, part2.split(','))
 
-		if x1 == x2:
+		xDir = getSign(x2 - x1)
+		yDir = getSign(y2 - y1)
 
-			if y1 < y2:
+		while x1 != x2 or y1 != y2:
 
-				while y1 <= y2:
+			dataMap[x1][y1] += 1
 
-					dataMap[x1][y1] += 1
-					y1 += 1
+			x1 += xDir
+			y1 += yDir
 
-			else:
-
-				while y2 <= y1:
-
-					dataMap[x1][y2] += 1
-					y2 += 1
-
-		elif y1 == y2:
-
-			if x1 < x2:
-
-				while x1 <= x2:
-
-					dataMap[x1][y1] += 1
-					x1 += 1
-
-			else:
-
-				while x2 <= x1:
-
-					dataMap[x2][y1] += 1
-					x2 += 1
-
-		else:
-
-			if y1 < y2 and x1 < x2:
-
-				while y1 <= y2:
-
-					dataMap[x1][y1] += 1
-					y1 += 1
-					x1 += 1
-
-			elif y2 < y1 and x2 < x1:
-
-				while y2 <= y1:
-
-					dataMap[x1][y1] += 1
-					y1 -= 1
-					x1 -= 1
-
-			elif y1 < y2 and x2 < x1:
-
-				while y1 <= y2:
-
-					dataMap[x1][y1] += 1
-					y1 += 1
-					x1 -= 1
-
-			elif y2 < y1 and x1 < x2:
-
-				while y2 <= y1:
-
-					dataMap[x1][y1] += 1
-					y1 -= 1
-					x1 += 1
+		dataMap[x1][y1] += 1
 
 	print(calculateValidPos(dataMap))
 
