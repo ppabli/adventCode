@@ -7,7 +7,7 @@ def dataSummary(data, n, moreCommon = True):
 	ones = 0
 	ceros = 0
 
-	for i in range(0, len(data) - 1):
+	for i in range(len(data)):
 		if data[i][n] == '1':
 			ones += 1
 		else:
@@ -36,7 +36,7 @@ def filterData(data, n, value):
 
 	newData = []
 
-	for i in range(0, len(data) - 1):
+	for i in range(len(data)):
 		if data[i][n] == value:
 			newData.append(data[i])
 
@@ -47,7 +47,7 @@ def part1():
 	gamma = ''
 	epsilon = ''
 
-	for i in range(0, length):
+	for i in range(length):
 		gamma += str(dataSummary(data, i))
 		epsilon += str(dataSummary(data, i, False))
 
@@ -63,7 +63,7 @@ def part2():
 	oxygenData = data
 	co2Data = data
 
-	for i in range(0, length):
+	for i in range(length):
 
 		oxygenData = filterData(oxygenData, i, dataSummary(oxygenData, i))
 		co2Data = filterData(co2Data, i, dataSummary(co2Data, i, False))
