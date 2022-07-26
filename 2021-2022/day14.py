@@ -43,7 +43,7 @@ def part1():
 
 	print(res)
 
-#part1()
+part1()
 
 def part2():
 
