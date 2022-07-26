@@ -1,6 +1,6 @@
 import numpy as np
 
-data = open('day5.data.txt', 'r').read().split('\n')
+data = open('./data/day5.data.txt', 'r').read().split('\n')
 
 def calculateValidPos(valueMap):
 

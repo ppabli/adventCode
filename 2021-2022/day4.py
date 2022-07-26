@@ -1,6 +1,6 @@
 import numpy as np
 
-data = open('day4.data.txt', 'r').read().split('\n')
+data = open('./data/day4.data.txt', 'r').read().split('\n')
 
 numbers = [int(i) for i in data[0].split(',')]
 

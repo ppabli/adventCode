@@ -1,4 +1,4 @@
-raw_data = open('day10.data.txt', 'r').read().split('\n')
+raw_data = open('./data/day10.data.txt', 'r').read().split('\n')
 
 open_pairs = ['(', '[', '<', "{"]
 close_pairs = [')', ']', '>', "}"]

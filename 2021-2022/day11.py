@@ -1,6 +1,6 @@
 import numpy as np
 
-raw_data = open('day11.data.txt', 'r').read().split('\n')
+raw_data = open('./data/day11.data.txt', 'r').read().split('\n')
 
 def checkFlash(data, checkedPos, x, y):
 

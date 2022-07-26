@@ -1,4 +1,4 @@
-data = open('day2.data.txt', 'r').read().split('\n')
+data = open('./data/day2.data.txt', 'r').read().split('\n')
 
 def part1():
 

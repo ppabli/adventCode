@@ -1,6 +1,6 @@
 import itertools
 
-raw_data = open('day8.data.txt', 'r').read().split('\n')
+raw_data = open('./data/day8.data.txt', 'r').read().split('\n')
 
 def part1():
 

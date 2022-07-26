@@ -1,4 +1,4 @@
-raw_data = open('day14.data.txt', 'r').read().split('\n')
+raw_data = open('./data/day14.data.txt', 'r').read().split('\n')
 
 def insert(list, var, i):
 	new_list = list[:i]

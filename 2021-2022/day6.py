@@ -1,4 +1,4 @@
-raw_data = open('day6.data.txt', 'r').read().split(',')
+raw_data = open('./data/day6.data.txt', 'r').read().split(',')
 
 def part1():
 

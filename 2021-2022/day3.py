@@ -1,4 +1,4 @@
-data = open('day3.data.txt', 'r').read().split('\n')
+data = open('./data/day3.data.txt', 'r').read().split('\n')
 
 length = len(data[0])
 

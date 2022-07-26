@@ -1,4 +1,4 @@
-data = open('day1.data.txt', 'r').read().split('\n')
+data = open('./data/day1.data.txt', 'r').read().split('\n')
 
 def part1():
 	incremnt = 0

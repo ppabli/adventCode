@@ -1,6 +1,6 @@
 import numpy as np
 
-raw_data = open('day13.data.txt', 'r').read().split('\n')
+raw_data = open('./data/day13.data.txt', 'r').read().split('\n')
 
 def foldY(dotMap, value):
 
