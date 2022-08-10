@@ -10,12 +10,10 @@ def home_is_free(state, home):
 		piece[0] == home and i not in proper_home[home] for i, piece in enumerate(state)
 	)
 
-
 def replace_piece(state, new_piece, i):
 	new_state = list(state)
 	new_state[i] = new_piece
 	return tuple(new_state)
-
 
 def move_to_corridor(state, to_check, loc, position):
 	for j in to_check:
@@ -23,7 +21,6 @@ def move_to_corridor(state, to_check, loc, position):
 			return
 		if j not in room_loc.values():
 			yield ("corr", j), abs(j - room_loc[loc]) + position + 1
-
 
 def action_single_piece(state, i, home):
 	piece = state[i]
@@ -66,7 +63,7 @@ def action_single_piece(state, i, home):
 
 
 def actions(state, homes):
-	"""For a given state, generates all states that can be reached from here."""
+
 	for i in range(len(state)):
 		home = homes[i]
 		mult = mults[home]
