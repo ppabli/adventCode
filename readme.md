@@ -11,6 +11,7 @@ Some days are not done, we are working on it.
 ## Year 2020 (Python)
 
 - [Day 1 code](./2020-2021/day1.py) and [Data](./2020-2021/data/day1.data.txt)
+- [Day 2 code](./2020-2021/day2.py) and [Data](./2020-2021/data/day2.data.txt)
 
 ## Year 2021 (Python)
 
