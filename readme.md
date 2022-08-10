@@ -7,6 +7,11 @@ Every solution have been tested with example data and exercise data. Also the 2 
 Some days are not done, we are working on it.
 
 # Solutions
+
+## Year 2020 (Python)
+
+- [Day 1 code](./2020-2021/day1.py) and [Data](./2020-2021/data/day1.data.txt)
+
 ## Year 2021 (Python)
 
 - [Day 1 code](./2021-2022/day1.py) and [Data](./2021-2022/data/day1.data.txt)
