@@ -22,6 +22,7 @@ Some days are not done, we are working on it.
 - [Day 10 code](./2020-2021/day10.py) and [Data](./2020-2021/data/day10.data.txt)
 - [Day 11 code](./2020-2021/day11.py) and [Data](./2020-2021/data/day11.data.txt)
 - [Day 12 code](./2020-2021/day12.py) and [Data](./2020-2021/data/day12.data.txt)
+- [Day 13 code](./2020-2021/day13.py) and [Data](./2020-2021/data/day13.data.txt)
 
 ## Year 2021 (Python)
 
