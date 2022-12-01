@@ -56,3 +56,6 @@ Some days are not done, we are working on it.
 - [Day 23 code](./2021-2022/day23.py) and [Data](./2021-2022/data/day23.data.txt)
 - [Day 24 code](./2021-2022/day24.py) and [Data](./2021-2022/data/day24.data.txt)
 - [Day 25 code](./2021-2022/day25.py) and [Data](./2021-2022/data/day25.data.txt)
+
+## Year 2022 (Python)
+- [Day 1 code](./2022-2023/day1.py) and [Data](./2022-2023/data/day1.data.txt)
