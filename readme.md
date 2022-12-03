@@ -60,3 +60,4 @@ Some days are not done, we are working on it.
 ## Year 2022 (Python)
 - [Day 1 code](./2022-2023/day1.py) and [Data](./2022-2023/data/day1.data.txt)
 - [Day 2 code](./2022-2023/day2.py) and [Data](./2022-2023/data/day2.data.txt)
+- [Day 3 code](./2022-2023/day3.py) and [Data](./2022-2023/data/day3.data.txt)
