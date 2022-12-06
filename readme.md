@@ -63,3 +63,4 @@ Some days are not done, we are working on it.
 - [Day 3 code](./2022-2023/day3.py) and [Data](./2022-2023/data/day3.data.txt)
 - [Day 4 code](./2022-2023/day4.py) and [Data](./2022-2023/data/day4.data.txt)
 - [Day 5 code](./2022-2023/day5.py) and [Data](./2022-2023/data/day5.data.txt)
+- [Day 6 code](./2022-2023/day6.py) and [Data](./2022-2023/data/day6.data.txt)
