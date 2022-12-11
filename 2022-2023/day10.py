@@ -39,6 +39,8 @@ def part1():
 
 part1()
 
+
+
 def part2():
 
 	cycle = 0
@@ -56,22 +58,26 @@ def part2():
 
 	x = np.array(x)
 
+	def update(cycle):
+
+		row = cycle // 40
+		col = cycle - (row * 40)
+
+		if col == register + 1 or col == register or col == register + 2:
+
+			x[row][col] = '#'
+
+		else:
+
+			x[row][col] = '.'
+
 	for line in data:
 
 		parts = line.split(" ")
 
 		if parts[0] == "noop":
 
-			row = cycle // 40
-			col = cycle - (row * 40)
-
-			if col == register + 1 or col == register or col == register + 2:
-
-				x[row][col] = '##'
-
-			else:
-
-				x[row][col] = '..'
+			update(cycle)
 
 			cycle += 1
 
@@ -79,33 +85,11 @@ def part2():
 
 			value = int(parts[1])
 
-			row = cycle // 40
-			col = cycle - (row * 40)
-
-			if col == register + 1 or col == register or col == register + 2:
-
-				x[row][col] = '##'
-				print('#', line, cycle, register, row, col)
-
-			else:
-
-				x[row][col] = '..'
-				print('.', line, col, register, row, col)
+			update(cycle)
 
 			cycle += 1
 
-			row = cycle // 40
-			col = cycle - (row * 40)
-
-			if col == register + 1 or col == register or col == register + 2:
-
-				x[row][col] = '##'
-				print('#', line, cycle, register, row, col)
-
-			else:
-
-				x[row][col] = '..'
-				print('.', line, cycle, register, row, col)
+			update(cycle)
 
 			cycle += 1
 			register += value
