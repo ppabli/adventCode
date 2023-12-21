@@ -22,7 +22,7 @@ def part1():
 
 	print(total)
 
-#part1()
+part1()
 
 def part2():
 
